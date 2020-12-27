@@ -1,8 +1,8 @@
 /**
- * @file insercion.cpp
+ * @file busqueda.cpp
  * @author Abel Ríos González
  * @author Salvador Romero Cortés
- * @brief Archivo para comparar los tiempos de acceso de la estructuras de datos de la STL <vector>
+ * @brief Archivo para comparar los tiempos de busqueda de la estructuras de datos de la STL <vector>
  */
 #include <iostream>
 #include <ctime>
