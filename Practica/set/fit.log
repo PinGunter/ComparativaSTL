@@ -475,3 +475,39 @@ correlation matrix of the fit parameters:
                 a      b      
 a               1.000 
 b              -0.996  1.000 
+
+
+*******************************************************************************
+Sun Dec 27 19:29:38 2020
+
+
+FIT:    data read from "data/busqueda.dat"
+        format = z
+        #datapoints = 700
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*(log(x)/log(2)) + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.7308768605e+05   0.00e+00  1.04e+01    1.000000e+00   1.000000e+00
+   6 8.5065249243e-14   0.00e+00  1.04e-04    1.960805e-08   1.403020e-10
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 8.50652e-14
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 698
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.10395e-08
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.2187e-16
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 1.96081e-08      +/- 2.95e-10     (1.504%)
+b               = 1.40302e-10      +/- 4.345e-09    (3097%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.995  1.000 
