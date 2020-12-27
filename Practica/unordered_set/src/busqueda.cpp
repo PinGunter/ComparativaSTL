@@ -1,5 +1,5 @@
 /**
- * @file insercion.cpp
+ * @file busqueda.cpp
  * @author Abel Ríos González
  * @author Salvador Romero Cortés
  * @brief Archivo para comparar los tiempos de busqueda de la estructuras de datos de la STL <unordered_set>
@@ -25,16 +25,17 @@ int main(int argc, char *argv[]){
   }
   int N = atoi(argv[1]);
 
-  //Preparamos el vector
+  //insertamos los elementos de 1 a N
   int numeros[N];
-  for (int i=1; i <= N; i++){
+  for (int i = 1; i <= N; i++){
     numeros[i] = i;
   }
-  list<int> lista(numeros,numeros+N); //rellenamos la lista con los valores
+
+  unordered_set<int> myset(numeros, numeros+N);
 
   clock_t tini, tfin;
   tini = clock();
-  lista.push_back(N+1);
+  myset.find(N);
   tfin = clock();
 
   cout << N << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;

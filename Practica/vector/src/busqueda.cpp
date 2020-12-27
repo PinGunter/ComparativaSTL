@@ -19,6 +19,24 @@ void sintaxis()
   exit(EXIT_FAILURE);
 }
 
+int busqueda(vector<int> vect, int x, int inf, int sup) {
+  int med;
+  bool enc=false;
+  while ((inf<=sup) && (!enc)) {
+    med = (inf+sup)/2; 
+    if (vect[med]==x) 
+      enc = true;
+    else if (vect[med] < x) 
+      inf = med+1;
+    else
+      sup = med-1;
+  }
+  if (enc) 
+    return med;
+  else 
+    return -1;
+}
+
 int main(int argc, char *argv[])
 {
   if (argc != 2)
@@ -37,7 +55,13 @@ int main(int argc, char *argv[])
     vect[i] = i;
   }
 
-  cout << N << "\t" << (tfin - tini) / (double)CLOCKS_PER_SEC << endl;
+  bool res;
+  tini = clock();
+  for (int i=0; i < 100000; i++){
+    res = busqueda(vect,N+561,0,vect.size());
+  }
+  tfin = clock();
+  cout << N << "\t" << ((tfin - tini)/100000.0) / (double)CLOCKS_PER_SEC << endl;
 
   return 0;
 }

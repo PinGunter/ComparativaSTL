@@ -25,17 +25,17 @@ int main(int argc, char *argv[]){
   }
   int N = atoi(argv[1]);
 
-  //Preparamos el vector
-  vector<int> vect(N);
-
   //insertamos los elementos de 1 a N
+  int numeros[N];
   for (int i = 1; i <= N; i++){
-    vect[i] = i;
+    numeros[i] = i;
   }
+
+  unordered_set<int> myset(numeros, numeros+N);
 
   clock_t tini, tfin;
   tini = clock();
-  vect.erase(vect.begin() + (N/2 -1));
+  myset.erase(N/2);
   tfin = clock();
 
   cout << N << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;
