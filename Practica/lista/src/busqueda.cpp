@@ -1,5 +1,5 @@
 /**
- * @file insercion.cpp
+ * @file busqueda.cpp
  * @author Abel Ríos González
  * @author Salvador Romero Cortés
  * @brief Archivo para comparar los tiempos de busqueda de la estructuras de datos de la STL <list>
@@ -27,14 +27,18 @@ int main(int argc, char *argv[]){
 
   //Preparamos el vector
   int numeros[N];
-  for (int i=1; i <= N; i++){
-    numeros[i] = i;
+  for (int i=0; i < N; i++){
+    numeros[i] = i+1;
   }
   list<int> lista(numeros,numeros+N); //rellenamos la lista con los valores
 
   clock_t tini, tfin;
+  typename list<int>::iterator it = lista.begin();
   tini = clock();
-  lista.push_back(N+1);
+  for (int i=0; i < N; i++){
+    ++it;
+  }
+  int res = (*it);
   tfin = clock();
 
   cout << N << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;

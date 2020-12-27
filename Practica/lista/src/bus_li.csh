@@ -1,6 +1,6 @@
 #!/bin/csh
 @ inicio = 100
-@ fin = 250000
+@ fin = 30000
 @ incremento = 100
 set ejecutable = bin/busqueda
 set salida = data/busqueda.dat

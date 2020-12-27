@@ -35,10 +35,11 @@ int main(int argc, char *argv[]){
 
   clock_t tini, tfin;
   tini = clock();
-  myset.find(N);
+  for (int i=0; i < 1000000; i++)
+    myset.find(N);
   tfin = clock();
 
-  cout << N << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;
+  cout << N << "\t" << ((tfin-tini)/1000000.0)/(double)CLOCKS_PER_SEC << endl;
 
   return 0;
 }
