@@ -511,3 +511,39 @@ correlation matrix of the fit parameters:
                 a      b      
 a               1.000 
 b              -0.995  1.000 
+
+
+*******************************************************************************
+Sun Dec 27 22:47:42 2020
+
+
+FIT:    data read from "data/acceso.dat"
+        format = z
+        #datapoints = 325
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*(log(x)/log(2)) + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 6.9551492987e+04   0.00e+00  9.67e+00    1.000000e+00   1.000000e+00
+   6 3.4797217955e-13  -1.45e-11  9.67e-06    3.932212e-08   9.579909e-08
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.47972e-13
+rel. change during last iteration : -1.45089e-16
+
+degrees of freedom    (FIT_NDF)                        : 323
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.28225e-08
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07731e-15
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 3.93221e-08      +/- 1.307e-09    (3.323%)
+b               = 9.57991e-08      +/- 1.781e-08    (18.59%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.995  1.000 
