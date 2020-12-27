@@ -1,6 +1,6 @@
 #!/bin/csh
 @ inicio = 100
-@ fin = 1000000
+@ fin = 250000
 @ incremento = 100
 set ejecutable = bin/acceso
 set salida = data/acceso.dat
