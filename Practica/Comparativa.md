@@ -62,9 +62,6 @@ Se borrará el elemento en la posición $[\frac{N}{2}]$ en el caso de `vector` y
     Gráfica incorporando los tiempos de búsqueda del punto medio.
     ![](https://i.imgur.com/VlMGSSY.png)
 
-    
-
-
 * Set
 
     Según la documentación debe tener una complejidad logarítmica en función del tamaño del contenedor.
@@ -74,6 +71,8 @@ Se borrará el elemento en la posición $[\frac{N}{2}]$ en el caso de `vector` y
     Complejidad teórica:
     * Caso promedio: Lineal en el número de elementos eliminados (que es constante en nuestro caso). 
     * Peor de los casos: lineal en función  del tamaño del contenedor.
+![](https://i.imgur.com/DfLTDgB.png)
+    Vemos que el resultado es similar al de `list`.
 
 
 ### Acceso al elemento central de la estructura
@@ -98,9 +97,18 @@ En el caso de `list`, recorriendo la lista.
 En el caso de `set` y `unordered_set` usaremos el método `find()`.
 
 * Vector
+    En el caso del vector, al usar un algoritmo de búsqueda binaria la complejidad esde $O(log_2(n))$.
+    ![](https://i.imgur.com/nCkK9rV.png)
 
 * List
+    En el caso de la lista tenemos que iterar sobre ella para localizar el elemento. Como el elemento que buscamos es el n-ésimo la complejidad es de $O(n)$. 
+    ![](https://i.imgur.com/ejYfn3r.png)
 
 * Set
+    La búsqueda de set tiene complejidad logarítmica: $O(log_2(n))$.
+    ![](https://i.imgur.com/r29Lwjz.png)
 
 * Unordered_set
+    La búsqueda con `unordered_set` es tiempo constante($O(1)$) en el caso medio y en el peor caso es lineal ($O(n)$).
+    ![](https://i.imgur.com/IkhoNhJ.png)
+    Podemos ver que a lo general, los tiempos son relativamente constantes, no van incrementando con el tamaño del contenedor.
