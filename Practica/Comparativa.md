@@ -86,10 +86,13 @@ Se borrará el elemento en la posición $[\frac{N}{2}]$ en el caso de `vector` y
     ![](https://i.imgur.com/8MJeVFQ.png)
 
 * Set
-
+    Al usar la orden find, que encuentra el elemento con un algoritmo con complejidad $O(log_2(n))$, el acceso al elemento medio también tiene una complejidad logarítmica
+    ![](https://i.imgur.com/ULs8bia.png)
 
 * Unordered_set
-Mismas condiciones que el apartado anterior
+    Al usar la orden find, que encuentra de media en tiempo constante, podemos ver que a rasgos generales, la función de los tiempos también es constante.
+    ![](https://i.imgur.com/j7u6bft.png)
+
 ### Búsqueda del elemento con clave/valor N en la estructura
 
 En el caso de `vector` se implementa una búsqueda binaria.
