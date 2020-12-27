@@ -5,6 +5,8 @@ VECT = vector/
 SET = set/
 UN_SET = unordered_set/
 
+todo: insercion borrado acceso busqueda
+
 insercion:
 	g++ -o $(VECT)$(BIN)insercion $(VECT)$(SRC)insercion.cpp
 	g++ -o $(LIST)$(BIN)insercion $(LIST)$(SRC)insercion.cpp

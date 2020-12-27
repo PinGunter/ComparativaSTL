@@ -115,3 +115,15 @@ En el caso de `set` y `unordered_set` usaremos el método `find()`.
     La búsqueda con `unordered_set` es tiempo constante($O(1)$) en el caso medio y en el peor caso es lineal ($O(n)$).
     ![](https://i.imgur.com/IkhoNhJ.png)
     Podemos ver que a lo general, los tiempos son relativamente constantes, no van incrementando con el tamaño del contenedor.
+
+## Conclusión
+
+En la inserción de elementos hemos visto como `list` es la más óptima, quedando como segundo lugar `unordered_set` al ser la media constante.
+
+En el borrado de elementos, `set` es la más eficiente, siguiendo el resto una tendencia lineal. Sin embargo, no todos son lineales con respecto al número de elementos, sino que algunos son lineales con respecto al número de elementos borrados con una llamada (`list` y  `unordered_set`). Por tanto, el segundo puesto estaría empatado entre estos dos.
+
+En el acceso a alementos `vector` es la ideal, seguido de `unordered_set`.
+
+Finalmente, en la búsqueda de elementos, `unordered_set` es la clara elección puesto que de media el tiempo es constante.
+
+Podemos observar, como realmente no hay una que sea siempre superior al resto. Todas tienen algún punto fuerte y otros donde flaquean. Si por ejemplo nos interesa que los accesos a los datos sean muy rápidos usaremos la clase `vector` mientras que si nos interesa insertar elementos ágilmente usaremos una lista.
