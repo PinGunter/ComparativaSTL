@@ -32,13 +32,17 @@ int main(int argc, char *argv[]){
   }
 
   set<int> myset(numeros, numeros+N);
-
+  double tiempo = 0;
   clock_t tini, tfin;
-  tini = clock();
-  myset.erase(N/2);
-  tfin = clock();
+  for (int i=0; i < 1000000; i++){
+    tini = clock();
+    myset.erase(N/2);
+    tfin = clock();
+    tiempo += (tfin-tini)/(double)CLOCKS_PER_SEC;
+    myset.insert(N/2);
+  }
 
-  cout << N << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;
+  cout << N << "\t" << tiempo/1000000.0 << endl;
 
   return 0;
 }

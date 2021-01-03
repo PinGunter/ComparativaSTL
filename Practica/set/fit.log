@@ -583,3 +583,39 @@ correlation matrix of the fit parameters:
                 a      b      
 a               1.000 
 b              -0.995  1.000 
+
+
+*******************************************************************************
+Sun Jan  3 20:12:04 2021
+
+
+FIT:    data read from "data/borrado.dat"
+        format = z
+        #datapoints = 1000
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*(log(x)/log(2)) + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.6359340913e+05   0.00e+00  1.08e+01    1.000000e+00   1.000000e+00
+   6 5.0814826148e-13  -1.99e-11  1.08e-04    1.543398e-08   2.546822e-07
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 5.08148e-13
+rel. change during last iteration : -1.9871e-16
+
+degrees of freedom    (FIT_NDF)                        : 998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.25647e-08
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.09167e-16
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 1.5434e-08       +/- 5.021e-10    (3.254%)
+b               = 2.54682e-07      +/- 7.653e-09    (3.005%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.996  1.000 
